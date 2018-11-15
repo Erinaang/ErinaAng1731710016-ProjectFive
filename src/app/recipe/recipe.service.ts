@@ -13,7 +13,7 @@ recipeSelected=new EventEmitter<Recipe>();
 
 private recipes:Recipe[]=[
   new Recipe('Resep Cap Enak',
-    'Akan ku buat resep ter enak',
+    'Akan ku buat resep ter enak, enak cap enak pasti enak',
     'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',[
       new Ingredient('meal',1),
       new Ingredient('strawberry',2)
@@ -31,6 +31,11 @@ private recipes:Recipe[]=[
     addIngredientsShoppingList(ingredient: Ingredient[]){
       this.slsService.addIngredients(ingredient);
     }
+
+    getRecipe(index:number){
+      return this.recipes [index] ;
+    }
+
 constructor(private slsService: ShoppingListService) { }
 
 }
